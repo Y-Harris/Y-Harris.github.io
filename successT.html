@@ -1,0 +1,66 @@
+Success
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Image</title>
+</head>
+<body>
+    <h1></h1>
+    <img src="C:\Users\Yolanda H\Desktop\Final\Flag1\IJONES2FG.jpg">
+</body>
+</html>
+
+Now that your in...don't let them put a HEX on you!
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Challenges</title>
+  <script>
+    function checkPhotoAnswer() {
+      var userAnswer = document.getElementById("photoAnswer").value.toLowerCase();
+      var correctAnswer = "desert of giza governorate";
+
+      if (userAnswer === correctAnswer) {
+        alert("Congratulations! You got the correct answer for the photo challenge.");
+      } else {
+        alert("Incorrect answer for the photo challenge. Please try again.");
+      }
+    }
+
+    function checkFlagAnswer() {
+      var userAnswer = document.getElementById("flagAnswer").value.toUpperCase();
+      var correctAnswer = "FLAG{TEMPLE}";
+
+      if (userAnswer === correctAnswer) {
+        alert("Congratulations! You have finished the flag challenge.");
+      } else {
+        alert("Incorrect answer for the flag challenge. Please try again.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Photo Challenge</h2>
+  
+  
+  <form>
+    <label for="photoAnswer">Where was this photo taken? </label>
+    <input type="text" id="photoAnswer" name="photoAnswer">
+    <br>
+    <input type="button" value="Submit" onclick="checkPhotoAnswer()">
+  </form>
+
+  <h2>Flag Challenge</h2>
+  
+  <form>
+    <label for="flagAnswer">What is the flag? </label>
+    <input type="text" id="flagAnswer" name="flagAnswer">
+    <br>
+    <input type="button" value="Submit" onclick="checkFlagAnswer()">
+  </form>
+</body>
+</html>
+
