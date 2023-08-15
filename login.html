@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge - Authentication Bypass</title>
+    <style>
+        /* You can add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 300px;
+        }
+
+        .login-input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .login-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" class="login-input" id="username" placeholder="Username">
+            <input type="password" class="login-input" id="password" placeholder="Password">
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <p class="error-message" id="error-message"></p>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Simulate the authentication process (Intentionally vulnerable)
+            if (username === 'admin' && password === 'admin123') {
+                // Successful login
+                window.location.href = 'successT.html';
+            } else {
+                // Display error message
+                document.getElementById('error-message').innerText = 'Invalid username or password.';
+            }
+        });
+    </script>
+</body>
+
+</html>
