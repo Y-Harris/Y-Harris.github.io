@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .start-button {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function checkAnswer() {
+            var userInput = document.getElementById("answerInput").value;
+            var correctAnswer = "FLAG{JONES23423}";
+            
+            if (userInput === correctAnswer) {
+                window.location.href = "flag2test.html"; // Redirect to correct answer page
+            } else {
+                alert("Incorrect answer. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>"X never, ever marks the spot!"-Indiana Jones</h1>
+        <p>You enter the temple and find a letter. You know something of importance must be in it. Can you open it and <b>find</b> the clue?</p>
+        <a class="download-link" href="C:\Users\Yolanda H\Desktop\Final\Flag1\whoami.docx" download>Download</a>
+        
+        <form>
+            <label for="answerInput">Enter your answer: </label>
+            <input type="text" id="answerInput" name="answerInput">
+            <input type="button" value="Submit" onclick="checkAnswer()">
+        </form>
+    </div>
+</body>
+</html>
